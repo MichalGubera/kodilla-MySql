@@ -8,7 +8,5 @@ BEGIN
 	END IF;
     RETURN result;
 END $$
-
 DELIMITER ;
-
-SELECT FindUser(0) AS USER;
+SELECT FindUser(2) AS USER;
