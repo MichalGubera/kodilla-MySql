@@ -4,13 +4,13 @@ DELIMITER $$
 
 CREATE FUNCTION UpdateBestseller(timesrented DECIMAL(5,2)) RETURNS BOOLEAN DETERMINISTIC
 BEGIN
-	DECLARE result BOOLEAN DEFAULT FALSE;
-	IF timesrented >= 0,66 THEN
-		SET result = TRUE;	
+	DECLARE result BOOLEAN DEFAULT 0;
+	IF timesrented >= 0.06 THEN
+		SET result = 1;	
 	END IF;
     RETURN result;
 END $$
 
 DELIMITER ;
 
--- SELECT UpdateBestseller(2) AS STATUS;
+-- SELECT UpdateBestseller(0.06) AS STATUS;

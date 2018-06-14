@@ -1,0 +1,3 @@
+CALL UpdateVipLevels();
+
+SELECT * FROM READERS;
