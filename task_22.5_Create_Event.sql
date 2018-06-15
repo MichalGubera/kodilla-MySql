@@ -47,7 +47,7 @@ CREATE EVENT UPDATE_STATS
     BEGIN
       DECLARE result INT DEFAULT 0;
       CALL UpdateBestsellers();
-      SELECT bestsellers_count FROM bestsellers_count INTO result;
+      SELECT bestseller_count FROM bestsellers_count INTO result;
       INSERT INTO STATS(STAT_DATE, STAT, VALUE)
         VALUES(CURTIME(), "BESTSELLERS", result);
     END $$
